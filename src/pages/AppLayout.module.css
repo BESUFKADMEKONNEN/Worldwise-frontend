@@ -1,0 +1,166 @@
+.app {
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  position: relative;
+}
+
+.menubox input {
+  display: none;
+}
+
+.map {
+  width: 70%;
+}
+
+.sidebar {
+  display: block;
+  width: 30%;
+  height: 100vh;
+  z-index: 4000;
+}
+
+.menuback {
+  display: flex;
+  z-index: 5000;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--color-dark--1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.8s cubic-bezier(0.86, -0.04, 0.5, 1.18);
+}
+
+.menubar,
+.menubar::after,
+.menubar:before {
+  z-index: 9999;
+  position: relative;
+}
+
+@media (max-width: 56.25em) {
+  .app {
+    z-index: 5000;
+  }
+
+  .map {
+    width: 100vw;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .menubox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+    position: absolute;
+    top: 3rem;
+    right: 2.5rem;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+  }
+
+  .menubox label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .menubar {
+    position: relative;
+    width: 4rem;
+    height: 5px;
+    background-color: var(--color-brand--2);
+    border-radius: 4px;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 7000;
+  }
+
+  .menubar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -12px;
+    left: 0;
+    background-color: var(--color-brand--2);
+    border-radius: 3px;
+    z-index: 7000;
+  }
+
+  .boxscale {
+    transform: scale(100);
+  }
+
+  .menubar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -12px;
+    left: 0;
+    background-color: var(--color-brand--2);
+    border-radius: 3px;
+    z-index: 7000;
+  }
+  .menubar:hover,
+  .menubar::before:hover,
+  .menubar::after:hover {
+    transform: scale(1, 2);
+  }
+
+  .menubox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .sidebarHidden {
+    display: none;
+  }
+
+  .sidebarHidden {
+    display: none;
+    transition: display 0.3s ease;
+  }
+
+  .sidebarVisible {
+    display: block;
+    transition: display 0.3s ease;
+  }
+
+  .input:checked ~ .map {
+    display: none;
+  }
+
+  .input:checked + label .menubar {
+    background-color: transparent;
+  }
+
+  .input:checked + label .menubar:before {
+    transform: rotate(45deg);
+    top: 0;
+    z-index: 6000;
+  }
+
+  .input:checked + label .menubar::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+    z-index: 6000;
+  }
+}

@@ -1,0 +1,13 @@
+.logo {
+  height: 8.2rem !important;
+  width: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .logo {
+    height: 5.2rem !important;
+  }
+  .sidebar {
+    margin-top: 10rem;
+  }
+}
