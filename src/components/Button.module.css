@@ -19,6 +19,7 @@
   font-size: 2.5rem;
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
+  margin-top: 2rem;
 }
 .secondary {
   font-weight: 700;

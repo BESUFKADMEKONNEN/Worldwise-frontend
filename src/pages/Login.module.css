@@ -5,6 +5,8 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: auto;
+
 }
 
 .form {
@@ -52,7 +54,7 @@
 
 @media (max-width: 56.25em) {
   .form {
-    height: 45%;
+    height: 50%;
   }
   .row {
     height: 25%;

@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-y: auto;
+}
+
+.form::-webkit-scrollbar {
+  width: 0; 
+  height: 0;
 }
 
 .row {
@@ -45,8 +51,9 @@
 
 @media (max-width: 56.25em) {
   .form {
-    height: 60%;
+    height: 70%;
     margin-top: 2rem;
+    
   }
   .row {
     height: 25%;

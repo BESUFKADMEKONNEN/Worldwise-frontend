@@ -37,11 +37,12 @@
 .user button:active,
 .user button:hover {
   box-shadow: 0 2px 3px rgb(170, 166, 166);
-  transform:  scale(1.2) ;
+  transform: scale(1.2);
 }
 
 @media (max-width: 56.25em) {
   .user {
+    top: 2.5rem;
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
